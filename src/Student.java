@@ -1,6 +1,6 @@
 public class Student { //initializers
     private int ID;
-    private int standing;
+    private String standing;
     private int zip;
     private String state;
     private String city;
@@ -10,9 +10,9 @@ public class Student { //initializers
     private String email;
     private static int scount;
 
-    public void setValues(int i1, int i2, int i3, String s1, String s2, String s3, String s4, String s5, String s6 ){
+    public void setValues(int i1, String s7, int i3, String s1, String s2, String s3, String s4, String s5, String s6 ){
         ID = i1;
-        standing = i2;
+        standing = s7;
         zip = i3;
         state = s1;
         city = s2;
@@ -22,15 +22,15 @@ public class Student { //initializers
         email = s6;
     }
     public void getValues(){
-        System.out.println("ID: ");
-        System.out.println("Standing: ");
-        System.out.println("Zip: ");
-        System.out.println("State: ");
-        System.out.println("City: ");
-        System.out.println("Address: ");
-        System.out.println("First Name: ");
-        System.out.println("Last Name: ");
-        System.out.println("Email: ");
+        System.out.println("ID: " + ID);
+        System.out.println("Standing: "+ standing);
+        System.out.println("Zip: "+ zip);
+        System.out.println("State: "+ state);
+        System.out.println("City: "+ city);
+        System.out.println("Address: "+ address);
+        System.out.println("First Name: "+ fName);
+        System.out.println("Last Name: "+ lName);
+        System.out.println("Email: "+ email);
     }
 
 
