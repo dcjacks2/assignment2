@@ -18,17 +18,17 @@ public class homework2 {
             input.nextLine();
             System.out.println("\n    Enter First Name: ");
             String fname = input.nextLine();
-            fname = s[j].nameValidation(fname);
+            fname = s[j].stringValidation(fname);
 
             System.out.println("    Enter Last Name: ");
             String lname = input.nextLine();
-            lname = s[j].nameValidation(lname);
+            lname = s[j].stringValidation(lname);
 
             System.out.println("    Enter ID: ");
-            int id = input.nextInt();
+            String id = input.nextLine();
+            id = s[j].IDValidation(id);
 
             System.out.println("    Enter Standing: ");
-            input.nextLine();
             String standing = input.nextLine();
 
             System.out.println("    Enter Email: ");
@@ -39,13 +39,13 @@ public class homework2 {
 
             System.out.println("    Enter City: ");
             String city = input.nextLine();
+            city = s[j].stringValidation(city);
 
             System.out.println("    Enter State: ");
-            input.nextLine();
             String state = input.nextLine();
 
             System.out.println("    Enter Zip: ");
-            int zip = input.nextInt();
+            String zip = input.nextLine();
 
             s[j].setValues(id, standing, zip, state, city, address, fname, lname, email);
 
