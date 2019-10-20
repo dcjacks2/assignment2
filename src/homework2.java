@@ -2,12 +2,12 @@ import java.util.Scanner;
 public class homework2 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        //int N;
+        int N;
         System.out.println("How many students Data will be entered?: ");
-        //N = input.nextInt();
-        Student[] s=new Student[2];
+        N = input.nextInt();
+        Student[] s=new Student[N];
         System.out.println("Enter student details: ");
-        for (int j=0; j<2; j++){
+        for (int j=0; j<N; j++){
             s[j] = new Student();
             System.out.println("Enter ID: ");
             int id = input.nextInt();
@@ -32,7 +32,7 @@ public class homework2 {
             s[j].setValues(id, standing, zip, state, city, address, fname, lname, email);
 
         }
-        for (int j=0; j<2; j++){
+        for (int j=0; j<N; j++){
             s[j].getValues();
         }
 
