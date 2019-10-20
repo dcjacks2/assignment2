@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Student { //initializers
     private int ID;
     private String standing;
@@ -9,6 +11,29 @@ public class Student { //initializers
     private String lName;
     private String email;
     private static int count;
+
+    public static String nameValidation(String name) {
+
+        Scanner scan = new Scanner(System.in);
+        String correctString = name;
+        int length = name.length();
+
+
+        for(int i = 0; i < length; i++){
+            if((Character.isLetter(name.charAt(i)))){
+                continue;
+            }
+            else {
+                System.out.println("ERROR --- Please enter only letters. Re-enter string here: ");
+                correctString = scan.nextLine();
+                name = correctString;
+                length = name.length();
+                i = 0;
+            }
+        }
+
+        return correctString;
+    }
 
     public void setValues(int i1, String s7, int i3, String s1, String s2, String s3, String s4, String s5, String s6 ){
         ID = i1;
@@ -23,15 +48,15 @@ public class Student { //initializers
     }
     public void displayInfo(){
 
-        System.out.println("First Name: "+ fName);
-        System.out.println("Last Name: "+ lName);
-        System.out.println("ID: " + ID);
-        System.out.println("Standing: "+ standing);
-        System.out.println("Zip: "+ zip);
-        System.out.println("State: "+ state);
-        System.out.println("City: "+ city);
-        System.out.println("Address: "+ address);
-        System.out.println("Email: "+ email);
+        System.out.println("\tFirst Name: "+ fName);
+        System.out.println("\tLast Name: "+ lName);
+        System.out.println("\tID: " + ID);
+        System.out.println("\tStanding: "+ standing);
+        System.out.println("\tZip: "+ zip);
+        System.out.println("\tState: "+ state);
+        System.out.println("\tCity: "+ city);
+        System.out.println("\tAddress: "+ address);
+        System.out.println("\tEmail: "+ email);
     }
     public static int incrementCount(){
         count = count+1;
