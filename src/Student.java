@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Student { //initializers
-    private int ID;
+    private String ID;
     private String standing;
-    private int zip;
+    private String zip;
     private String state;
     private String city;
     private String address;
@@ -11,10 +11,11 @@ public class Student { //initializers
     private String lName;
     private String email;
     private static int count;
+    public static Scanner scan = new Scanner(System.in);
 
-    public static String nameValidation(String name) {
+    public static String stringValidation(String name) {
 
-        Scanner scan = new Scanner(System.in);
+
         String correctString = name;
         int length = name.length();
 
@@ -33,9 +34,36 @@ public class Student { //initializers
         }
 
         return correctString;
+
     }
 
-    public void setValues(int i1, String s7, int i3, String s1, String s2, String s3, String s4, String s5, String s6 ){
+    public static String IDValidation(String ID){
+        String correctInt = ID;
+        int length = ID.length();
+
+        for(int i = 0; i < length; i++){
+            if((Character.isDigit(ID.charAt(i))) && length <= 7){
+                continue;
+            }
+            else {
+                System.out.println("ERROR --- Please enter only a 7 digit ID. Re-enter ID here: ");
+                correctInt = scan.nextLine();
+                ID = correctInt;
+                length = ID.length();
+                i = 0;
+            }
+        }
+
+        return correctInt;
+
+    }
+
+
+
+
+
+
+    public void setValues(String i1, String s7, String i3, String s1, String s2, String s3, String s4, String s5, String s6 ){
         ID = i1;
         standing = s7;
         zip = i3;
