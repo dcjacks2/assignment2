@@ -58,7 +58,32 @@ public class Student { //initializers
 
     }
 
+    public static String emailValidation(String email){
 
+        String correctEmail = email;
+        int length = email.length();
+
+        for(int i = 0; i < length; i++){
+            if(email.contains("@") && email.contains(".org")){
+                continue;
+            }
+            if(email.contains("@") && email.contains(".edu")){
+                continue;
+            }
+            if(email.contains("@") && email.contains(".com")){
+                continue;
+            }
+            else {
+                System.out.println("ERROR --- Please enter a valid email in the form <username>@<domain>.<edu,com,org> : ");
+                correctEmail = scan.nextLine();
+                email = correctEmail;
+                length = email.length();
+                i = 0;
+            }
+        }
+
+        return correctEmail;
+    }
 
 
 
