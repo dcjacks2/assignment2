@@ -33,6 +33,7 @@ public class homework2 {
 
             System.out.println("    Enter Email: ");
             String email = input.nextLine();
+            email = s[j].emailValidation(email);
 
             System.out.println("    Enter Address: ");
             String address= input.nextLine();
