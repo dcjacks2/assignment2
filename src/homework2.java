@@ -37,6 +37,7 @@ public class homework2 {
 
             System.out.println("    Enter Address: ");
             String address= input.nextLine();
+            address = s[j].addressValidation(address);
 
             System.out.println("    Enter City: ");
             String city = input.nextLine();

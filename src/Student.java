@@ -1,3 +1,4 @@
+import javax.swing.text.AttributeSet;
 import java.util.Scanner;
 
 public class Student { //initializers
@@ -83,6 +84,27 @@ public class Student { //initializers
         }
 
         return correctEmail;
+    }
+    public static String addressValidation(String address){
+        String correctAddress = address;
+
+        String[] addressParse = address.split(" ");
+        int length = addressParse[0].length();
+
+        for(int i = 0; i < length; i++){
+            if((Character.isDigit(addressParse[0].charAt(i)))){
+                continue;
+            }
+            else {
+                System.out.println("ERROR --- Please enter a valid address in the following format (1234 Main Street):");
+                correctAddress = scan.nextLine();
+                address = correctAddress;
+                length = address.length();
+                i = 0;
+            }
+        }
+
+        return correctAddress;
     }
 
 
