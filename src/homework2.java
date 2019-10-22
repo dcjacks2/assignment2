@@ -28,7 +28,7 @@ public class homework2 {
             String id = input.nextLine();
             id = s[j].IDValidation(id);
 
-            System.out.println("    Enter Standing: ");
+            System.out.println("    Enter Class Standing: ");
             String standing = input.nextLine();
             standing = s[j].standingValidation(standing);
 
@@ -44,10 +44,11 @@ public class homework2 {
             String city = input.nextLine();
             city = s[j].stringValidation(city);
 
-            System.out.println("    Enter State: ");
+            System.out.println("    Enter State in format of 'TX, AK, AL, LA, etc.': ");
             String state = input.nextLine();
+            state = s[j].stateValidation(state);
 
-            System.out.println("    Enter Zip: ");
+            System.out.println("    Enter 9 digit Zip: ");
             String zip = input.nextLine();
             zip = s[j].zipDigitvalidation(zip);
             zip = s[j].zipLengthvalidation(zip);
