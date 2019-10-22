@@ -67,36 +67,26 @@ public class Student { //initializers
                 continue;
             }
             else{
-                System.out.println("ERROR --- Please enter a 9 digit zip code. Re-enter Zip here: ");
+                System.out.println("ERROR --- Please enter a digit-only zip code (#########). Re-enter Zip here: ");
                 correctZip = scan.nextLine();
                 Zip = correctZip;
                 length = Zip.length();
                 i = 0;
             }
         }
-        for(int i = 0; i< length; i++){
-            if(length > 9 || length < 9){
-                System.out.println("ERROR --- Please enter a 9 digit zip code. Re-enter Zip here: ");
-                correctZip = scan.nextLine();
-                Zip = correctZip;
-                length = Zip.length();
-                i = 0;
-            }
-            else{
-                continue;
-            }
-        }
-
         return correctZip;
     }
 
     public static String zipLengthvalidation(String zip){
+        String correctZip = zip;
+        int length = zip.length();
+
         for(int i = 0; i< length; i++){
             if(length > 9 || length < 9){
-                System.out.println("ERROR --- Please enter a 9 digit zip code. Re-enter Zip here: ");
+                System.out.println("ERROR --- Please enter a 9 digit-long zip code. Re-enter Zip here: ");
                 correctZip = scan.nextLine();
-                Zip = correctZip;
-                length = Zip.length();
+                zip = correctZip;
+                length = zip.length();
                 i = 0;
             }
             else{
@@ -131,9 +121,9 @@ public class Student { //initializers
                 i = 0;
             }
         }
-
         return correctEmail;
     }
+
     public static String addressValidation(String address){
         String correctAddress = address;
 
@@ -156,6 +146,22 @@ public class Student { //initializers
         return correctAddress;
     }
 
+    public static String standingValidation(String standing){
+        String correctStanding = standing;
+
+        for(int i = 0; i < 2; i++){
+            if(standing.equalsIgnoreCase("Freshman") || standing.equalsIgnoreCase("Sophomore") || standing.equalsIgnoreCase("Junior") || standing.equalsIgnoreCase("Senior")){
+                continue;
+            }
+            else{
+                System.out.println("ERROR --- Please enter either 'freshman', 'sophomore', 'junior', or 'senior'.:");
+                correctStanding = scan.nextLine();
+                standing = correctStanding;
+                i = 0;
+            }
+        }
+        return correctStanding;
+    }
     //public static String stateValidation(String state){
 
     //}
