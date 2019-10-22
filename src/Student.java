@@ -162,9 +162,29 @@ public class Student { //initializers
         }
         return correctStanding;
     }
-    //public static String stateValidation(String state){
+    public static String stateValidation(String state){
+        String correctState = state;
 
-    //}
+        for(int i = 0; i < 2; i++){
+            if(state.equalsIgnoreCase("AK") || state.equalsIgnoreCase("AL") || state.equalsIgnoreCase("AR") || state.equalsIgnoreCase("AZ") || state.equalsIgnoreCase("CA") || state.equalsIgnoreCase("CO") || state.equalsIgnoreCase("CT") || state.equalsIgnoreCase("DC") || state.equalsIgnoreCase("DE") || state.equalsIgnoreCase("FL")
+            || state.equalsIgnoreCase("GA") || state.equalsIgnoreCase("HI") || state.equalsIgnoreCase("IA") || state.equalsIgnoreCase("ID") || state.equalsIgnoreCase("IL") || state.equalsIgnoreCase("IN") || state.equalsIgnoreCase("KS") || state.equalsIgnoreCase("KY") || state.equalsIgnoreCase("LA") || state.equalsIgnoreCase("MA")
+            || state.equalsIgnoreCase("MD") || state.equalsIgnoreCase("ME") || state.equalsIgnoreCase("MI") || state.equalsIgnoreCase("MN") || state.equalsIgnoreCase("MO") || state.equalsIgnoreCase("MS") || state.equalsIgnoreCase("MT") || state.equalsIgnoreCase("NC") || state.equalsIgnoreCase("ND") || state.equalsIgnoreCase("NE")
+            || state.equalsIgnoreCase("NH") || state.equalsIgnoreCase("NJ") || state.equalsIgnoreCase("NM") || state.equalsIgnoreCase("NV") || state.equalsIgnoreCase("NY") || state.equalsIgnoreCase("OH") || state.equalsIgnoreCase("OK") || state.equalsIgnoreCase("OR") || state.equalsIgnoreCase("PA") || state.equalsIgnoreCase("RI")
+            || state.equalsIgnoreCase("SC") || state.equalsIgnoreCase("SD") || state.equalsIgnoreCase("TN") || state.equalsIgnoreCase("TX") || state.equalsIgnoreCase("UT") || state.equalsIgnoreCase("VA") || state.equalsIgnoreCase("VT") || state.equalsIgnoreCase("WA") || state.equalsIgnoreCase("WI") || state.equalsIgnoreCase("WV")
+            || state.equalsIgnoreCase("WY")){
+                continue;
+            }
+            else{
+                System.out.println("ERROR --- Please enter your state in the following format of 'TX, GA, AL, etc.': ");
+                correctState = scan.nextLine();
+                state = correctState;
+                i = 0;
+            }
+        }
+
+
+        return correctState;
+    }
 
 
 
@@ -185,11 +205,12 @@ public class Student { //initializers
         System.out.println("\tLast Name: "+ lName);
         System.out.println("\tID: " + ID);
         System.out.println("\tStanding: "+ standing);
-        System.out.println("\tZip: "+ zip);
-        System.out.println("\tState: "+ state);
-        System.out.println("\tCity: "+ city);
-        System.out.println("\tAddress: "+ address);
         System.out.println("\tEmail: "+ email);
+        System.out.println("\tAddress: "+ address);
+        System.out.println("\tCity: "+ city);
+        System.out.println("\tState: "+ state);
+        System.out.println("\tZip: "+ zip);
+
     }
     public static int incrementCount(){
         count = count+1;
