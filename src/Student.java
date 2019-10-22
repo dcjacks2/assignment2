@@ -59,6 +59,55 @@ public class Student { //initializers
 
     }
 
+    public static String zipDigitvalidation(String Zip){
+        String correctZip = Zip;
+        int length = Zip.length();
+        for(int i = 0; i< length; i++){
+            if((Character.isDigit(Zip.charAt(i)))){
+                continue;
+            }
+            else{
+                System.out.println("ERROR --- Please enter a 9 digit zip code. Re-enter Zip here: ");
+                correctZip = scan.nextLine();
+                Zip = correctZip;
+                length = Zip.length();
+                i = 0;
+            }
+        }
+        for(int i = 0; i< length; i++){
+            if(length > 9 || length < 9){
+                System.out.println("ERROR --- Please enter a 9 digit zip code. Re-enter Zip here: ");
+                correctZip = scan.nextLine();
+                Zip = correctZip;
+                length = Zip.length();
+                i = 0;
+            }
+            else{
+                continue;
+            }
+        }
+
+        return correctZip;
+    }
+
+    public static String zipLengthvalidation(String zip){
+        for(int i = 0; i< length; i++){
+            if(length > 9 || length < 9){
+                System.out.println("ERROR --- Please enter a 9 digit zip code. Re-enter Zip here: ");
+                correctZip = scan.nextLine();
+                Zip = correctZip;
+                length = Zip.length();
+                i = 0;
+            }
+            else{
+                continue;
+            }
+        }
+
+        return correctZip;
+
+    }
+
     public static String emailValidation(String email){
 
         String correctEmail = email;
@@ -107,6 +156,9 @@ public class Student { //initializers
         return correctAddress;
     }
 
+    //public static String stateValidation(String state){
+
+    //}
 
 
 
