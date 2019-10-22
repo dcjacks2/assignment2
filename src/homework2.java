@@ -30,6 +30,7 @@ public class homework2 {
 
             System.out.println("    Enter Standing: ");
             String standing = input.nextLine();
+            standing = s[j].standingValidation(standing);
 
             System.out.println("    Enter Email: ");
             String email = input.nextLine();
@@ -48,6 +49,8 @@ public class homework2 {
 
             System.out.println("    Enter Zip: ");
             String zip = input.nextLine();
+            zip = s[j].zipDigitvalidation(zip);
+            zip = s[j].zipLengthvalidation(zip);
 
             s[j].setValues(id, standing, zip, state, city, address, fname, lname, email);
 
